@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# Hackintosh OpenCore 0.7.1 MSI Bazooka B450m MAX WiFi
 
-You can use the [editor on GitHub](https://github.com/mfdogalindo/Hackintosh-MSI-B450-Bazooka-Max-WiFi/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Configuración de OpenCore 0.7.1 con soporte para macOS BigSur (11.4). 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Todo funciona :) (ok, facetime no)
 
-### Markdown
+Novedades: 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* Puertos USB configurados para esta tarjeta.
+* Parches AMD actualizados.
+* Controlador de WiFi nativo sin soporte de AirDrop.
+* OpenRGB compilado para esta motherboard, no ofrece control total de RGB, pero es algo.
 
-```markdown
-Syntax highlighted code block
+## Conjunto de hardware
 
-# Header 1
-## Header 2
-### Header 3
+* Tarjeta madre: MSI Bazooka B450m MAX WiFi 
 
-- Bulleted
-- List
+* Versión BIOS: 7C87v16 (2021-05-25)
+* CPU: AMD Ryzen 3600x 
+* GPU: Sapphire Pulse Rx580 8GB
+* RAM: 32 GB
+* Almacenamiento: Crucial MX500 AHCI SATA
+* Monitor 4K + Monitor secundario 1080p
 
-1. Numbered
-2. List
+## Preparación
 
-**Bold** and _Italic_ and `Code` text
+1. Upgrade/Downgrade BIOS, si se tiene instalada una versión más reciente es posible que OpenCore no consiga iniciar el instalador o el SO. Las versiones 7C87v10, 7C87v11, 7C87v12, 7C87v14 y 7C87v16 funcionan correctamente.
+2. Configurar BIOS
+   - Almacenamiento en modo AHCI
+   - Boot en modo CSM -> UEFI MODE falla con mi GPU pero puedes intentarlo.
+   - Deshabilitar Above 4g memory/cryptocurrency mining.
 
-[Link](url) and ![Image](src)
-```
+## Instalación
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Cree un medio de instalación, en mi caso he tenido éxito siguiento el método de Recovery de macOS Catalina ->  https://youtu.be/khs7kEAELWc Gracias a Brandon Yen.
 
-### Jekyll Themes
+O crea un medio de instalación USB desde macOS https://support.apple.com/es-co/HT201372
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mfdogalindo/Hackintosh-MSI-B450-Bazooka-Max-WiFi/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Post-Instalación
 
-### Support or Contact
+Una vez instalado, es necesario cambiar el número de serie -> https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+AMD Power Gadget para vigilar la temperatura y rendimiento del CPU y OpenRGB para disfrutar de tus luces RGB.
+
+## Créditos
+
+* Dortiana OpenCore https://dortania.github.io/OpenCore-Install-Guide/
+* Soporte WiFi y Bluetooth https://github.com/OpenIntelWireless 
+* AMD Power Optimization https://github.com/trulyspinach
+* OpenRGB https://gitlab.com/CalcProgrammer1/OpenRGB
