@@ -61,30 +61,30 @@
 				<key>WiFi_1</key>
 				<dict>
 					<key>password</key>
-					<string>yourpwd</string>
+					<string>12345678</string>
 					<key>ssid</key>
-					<string>yourssid</string>
+					<string>MyNetWork</string>
 				</dict>
 				<key>WiFi_2</key>
 				<dict>
 					<key>password</key>
-					<string>123123asd</string>
+					<string>123123123</string>
 					<key>ssid</key>
-					<string>test</string>
+					<string>ssdt_5G</string>
 				</dict>
 				<key>WiFi_3</key>
 				<dict>
 					<key>password</key>
-					<string>123</string>
+					<string>123123123123</string>
 					<key>ssid</key>
-					<string>xd</string>
+					<string>Redmi</string>
 				</dict>
 				<key>WiFi_4</key>
 				<dict>
 					<key>password</key>
-					<string>asdqwe123</string>
+					<string>123123123123</string>
 					<key>ssid</key>
-					<string>opiasd</string>
+					<string>CMCC-KtG6</string>
 				</dict>
 			</dict>
 		</dict>
